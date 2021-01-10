@@ -59,6 +59,7 @@
         </b-form-text>
         <b-form-input
           id="input-5"
+          type="password"
           v-model="user.credentials.password.value"
           placeholder="Enter password"
           required
