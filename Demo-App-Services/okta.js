@@ -1,0 +1,69 @@
+const okta = require('@okta/okta-sdk-nodejs');
+
+const config = {
+    orgUrl: 'https://{{ORG URL}}/',
+    token: '{{OKTA API TOKEN}}'
+}
+
+const client = new okta.Client(config);
+
+async function createUser(user) {
+    try {
+        let createdUser = await client.createUser(user);
+        return createdUser;
+    } catch (e) {
+        console.log(e);
+        throw e;
+    }
+}
+
+async function getUser(userId) {
+    try {
+        let user = await client.getUser(userId);
+        return user;
+    } catch (e) {
+        console.log(e);
+        throw e;
+    }
+}
+
+
+async function updateUser(updatedUser) {
+    try {
+        let userId = updatedUser.profile.login;
+        let user = await client.getUser(userId);
+        user.profile.firstName = updatedUser.profile.firstName;
+        user.profile.lastName = updatedUser.profile.lastName;
+        user.profile.email = updatedUser.profile.email;
+        return await user.update();
+    } catch (e) {
+        console.log(e);
+        throw e;
+    }
+}
+
+async function addAdmin(userId) {
+    try {
+        let user = await client.getUser(userId);
+        return await user.addToGroup("00gw9sljexGf1bATG0h7");
+    } catch (e) {
+        console.log(e);
+        throw e;
+    }
+}
+
+async function deleteUser(userId) {
+    try {
+        let user = await client.getUser(userId);
+        return await user.delete();
+    } catch (e) {
+        console.log(e);
+        throw e;
+    }
+}
+
+exports.getUser = getUser;
+exports.updateUser = updateUser;
+exports.createUser = createUser;
+exports.deleteUser = deleteUser;
+exports.addAdmin = addAdmin;
