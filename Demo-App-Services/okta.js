@@ -45,7 +45,7 @@ async function updateUser(updatedUser) {
 async function addAdmin(userId) {
     try {
         let user = await client.getUser(userId);
-        return await user.addToGroup("00gw9sljexGf1bATG0h7");
+        return await user.addToGroup("{{GROUP ID");
     } catch (e) {
         console.log(e);
         throw e;
