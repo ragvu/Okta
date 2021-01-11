@@ -19,4 +19,4 @@
 11. The following sequence occurs when an admin performs an action:
     - A REST call will be made to the backend Node.js server. The user's access token is included in the authorization header of this call.
     - The backend server verifies the token to ensure validity and the isAdmin claim.
-    - Given the above conditions, the admin operation is sent to Okta with the token insertd in the header.
+    - Given the above conditions, the admin operation is sent to Okta with the token inserted in the header.
