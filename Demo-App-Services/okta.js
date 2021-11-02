@@ -1,8 +1,8 @@
 const okta = require('@okta/okta-sdk-nodejs');
 
 const config = {
-    orgUrl: 'https://{{ORG URL}}/',
-    token: '{{OKTA API TOKEN}}'
+    orgUrl: 'https://vproductions.okta.com/',
+    token: '00uyJhbHJjCqL2_91FoEzJVkxorxGisL4J3VqL2n1m'
 }
 
 const client = new okta.Client(config);

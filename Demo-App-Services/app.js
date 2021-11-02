@@ -11,9 +11,9 @@ app.use(bodyParser.json())
 
 //credentials 
 const oktaJwtVerifier = new OktaJwtVerifier({
-    clientId: '{{CLIENT ID}}',
-    issuer: 'https://{{OKTA ORG}}/oauth2/default',
-    audience: '{{AUDIENCE}}'
+    clientId: '0oa2grt91eXBnFBvt5d7',
+    issuer: 'https://vproductions.okta.com/oauth2/default',
+    audience: 'api://default'
 })
 
 // Verify JWT token middleware
