@@ -1,9 +1,14 @@
 const okta = require('@okta/okta-sdk-nodejs');
+require('dotenv').config();
+
+token = process.env.API_KEY;
 
 const config = {
     orgUrl: 'https://vproductions.okta.com/',
-    token: '00uyJhbHJjCqL2_91FoEzJVkxorxGisL4J3VqL2n1m'
+    token 
 }
+
+console.log(token);
 
 const client = new okta.Client(config);
 
