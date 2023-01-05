@@ -5,7 +5,7 @@
 4. The classis Okta login page is used for authentication.
 5. OIDC is used for authorization.
 
-## Data Flow:
+# Data Flow:
 1. User enters SPA URL.
 2. Webserver returns the page and associated Javascript and CSS files.
 3. Unauthenticated landing page is displayed.
