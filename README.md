@@ -2,8 +2,8 @@
 1. This single page application(SPA) is implemented using Vue.JS and BootstrapVue. 
 2. The backend rest services are implemented using Node.js and express. 
 3. The backend rest services are authorized using the Okta JWT verifier library.
-4. The classis Okta login page is used for authentication.
-5. OIDC is used for authorization.
+4. The classic Okta login page is used for authentication.
+
 
 # Data Flow:
 1. User enters SPA URL.
